@@ -1,8 +1,8 @@
+<h5>Your cookbooks</h5>
+
 <% @cookbooks.each { |cookbook|  %>
   <%= cookbook.name %>
 <% } %>
 
-
-<%= button_tag 'New cookbook', { class: "btn btn-primary" } %>
-
-<% #CHECK BOOTSTRAP INSTALL %>
+<button class="btn btn-primary" data-controller="new_cookbook">New cookbook</button>
+<%# <%= 'New cookbook', { class: "btn btn-primary" } %>
