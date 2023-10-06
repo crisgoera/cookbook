@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_04_155839) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_06_141029) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cookbooks", force: :cascade do |t|
     t.string "name"
     t.bigint "user_id", null: false
-    t.bigint "dish_id", null: false
+    t.bigint "dish_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["dish_id"], name: "index_cookbooks_on_dish_id"

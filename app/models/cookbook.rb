@@ -1,6 +1,6 @@
 class Cookbook < ApplicationRecord
   belongs_to :user
-  belongs_to :dish
+  belongs_to :dish, required: false
 
   validates :name, presence: true, uniqueness: true, length: {
     maximum: 50,

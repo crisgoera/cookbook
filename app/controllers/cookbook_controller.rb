@@ -17,11 +17,7 @@ class CookbookController < ApplicationController
   def create
     @new_cookbook = Cookbook.new(cookbook_params)
     @new_cookbook.user = current_user
-    if @new_cookbook.save
-      redirect_to "cookbook#index"
-    else
-      render :new, status: :unprocessable_entity
-    end
+    @new_cookbook.valid? ? @new_cookbook.save : raise
   end
 
   def edit
