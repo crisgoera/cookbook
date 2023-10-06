@@ -1,10 +1,11 @@
-<h5>Your cookbooks</h5>
+<div class="container">
+  <h5>Your cookbooks</h5>
 
-<% @cookbooks.each { |cookbook|  %>
-  <%= cookbook.name %>
-<% } %>
+  <% @cookbooks.each { |cookbook|  %>
+    <%= cookbook.name %>
+  <% } %>
 
-<div data-controller="new-cookbook">
-  <button class="btn btn-primary" data-action="toggleForm">New cookbook</button>
-  
+  <div data-controller="new-cookbook">
+    <button class="btn btn-primary" data-action="click->new-cookbook#toggleForm">New cookbook</button>
+  </div>
 </div>

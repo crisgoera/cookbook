@@ -1,8 +1,9 @@
 class CookbookController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
     @cookbooks = Cookbook.all
+    @new_cookbook = Cookbook.new
   end
 
   def show

@@ -7,6 +7,6 @@ export default class extends Controller {
   }
 
   toggleForm() {
-
+    console.log("click")
   }
 }
