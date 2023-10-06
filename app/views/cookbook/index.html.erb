@@ -6,9 +6,13 @@
   <% } %>
 
   <div data-controller="new-cookbook">
-    <button class="btn btn-primary" data-action="click->new-cookbook#toggleForm">New cookbook</button>
+    <button class="btn btn-primary" data-new-cookbook-target="button" data-action="click->new-cookbook#toggleForm">Add cookbook</button>
 
-    <%= simple_form_for @new_cookbook do |f| %>
-      <%= f.input %>
+    <div class="cookbook-form d-none" data-new-cookbook-target="form">
+      <%= simple_form_for @new_cookbook, url: cookbook_index_path do |f| %>
+        <%= f.input :name %>
+        <%= f.submit "Create cookbook" %>
+      <% end %>
+    </div>
   </div>
 </div>
