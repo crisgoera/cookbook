@@ -54,7 +54,7 @@ gem 'devise'
 gem "httparty"
 
 # Bootstrap
-gem 'bootstrap'
+gem 'bootstrap', '~> 5.3.1'
 
 # Simple form
 gem "simple_form", github: "heartcombo/simple_form"
