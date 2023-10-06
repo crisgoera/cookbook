@@ -1,16 +1,21 @@
 <div class="container">
   <h5>Your cookbooks</h5>
 
-  <% @cookbooks.each { |cookbook|  %>
-    <%= cookbook.name %>
-  <% } %>
+  <% if @cookbooks.present? %>
+    <% @cookbooks.each { |cookbook|  %>
+      <%= cookbook.name %>
+    <% } %>
+  <% else %>
+    <p>Your cookbook list is empty</p>
+  <% end %>
 
   <div data-controller="new-cookbook">
     <button class="btn btn-primary" data-new-cookbook-target="button" data-action="click->new-cookbook#toggleForm">Add cookbook</button>
 
     <div class="cookbook-form d-none" data-new-cookbook-target="form">
       <%= simple_form_for @new_cookbook, url: cookbook_index_path do |f| %>
-        <%= f.input :name %>
+        <%= f.input :name,
+          required: true %>
         <%= f.submit "Create cookbook" %>
       <% end %>
     </div>
