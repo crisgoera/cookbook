@@ -15,6 +15,7 @@
     <div class="cookbook-form d-none" data-new-cookbook-target="form">
       <%= simple_form_for @new_cookbook, url: cookbook_index_path do |f| %>
         <%= f.input :name,
+          input_html: { min: '3', max: '30' }
           required: true %>
         <%= f.submit "Create cookbook" %>
       <% end %>
