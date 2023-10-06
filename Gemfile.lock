@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/heartcombo/simple_form.git
+  revision: 921ce9c3fc100e1737125ba1b5a2037c03f2de1b
+  specs:
+    simple_form (5.2.0)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -68,10 +76,16 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.5)
       public_suffix (>= 2.0.2, < 6.0)
+    autoprefixer-rails (10.4.15.0)
+      execjs (~> 2)
     bcrypt (3.1.19)
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
+    bootstrap (5.3.1)
+      autoprefixer-rails (>= 9.1.0)
+      popper_js (>= 2.11.8, < 3)
+      sassc-rails (>= 2.0.0)
     builder (3.2.4)
     capybara (3.39.2)
       addressable
@@ -99,6 +113,7 @@ GEM
       dotenv (= 2.8.1)
       railties (>= 3.2)
     erubi (1.12.0)
+    execjs (2.9.1)
     ffi (1.16.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
@@ -145,6 +160,7 @@ GEM
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.5.4)
+    popper_js (2.11.8)
     public_suffix (5.0.3)
     puma (5.6.7)
       nio4r (~> 2.0)
@@ -240,6 +256,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  bootstrap
   capybara
   debug
   devise
@@ -253,6 +270,7 @@ DEPENDENCIES
   redis (~> 4.0)
   sassc-rails
   selenium-webdriver
+  simple_form!
   sprockets-rails
   stimulus-rails
   turbo-rails
