@@ -9,19 +9,11 @@
     <p>Your cookbook list is empty</p>
   <% end %>
 
-  <div data-controller="new-cookbook">
-    <button class="btn btn-primary" data-new-cookbook-target="button" data-action="click->new-cookbook#toggleForm">Add cookbook</button>
+  <div data-controller="newCookbook">
+    <button class="btn btn-primary" data-newCookbook-target="button" data-action="click->newCookbook#toggleForm">Add cookbook</button>
 
-    <div class="cookbook-form d-none" data-new-cookbook-target="form">
-      <%= simple_form_for @new_cookbook, url: cookbook_index_path do |f| %>
-        <%= f.input :name,
-          input_html: { minlength: 5, maxlength: 30 },
-          required: true,
-          input_html: { data: { action: "keyup->new-cookbook#validate" } } %>
-
-        <%= button_tag "Create cookbook", disabled: true %>
-      <% end %>
-    </div>
+    <%= render partial: 'shared/cookbook_form', object: @new_cookbook %>
 
   </div>
+
 </div>

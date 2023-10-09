@@ -18,10 +18,7 @@ export default class extends Controller {
 
   validate() {
     const length = document.getElementById("cookbook_name").value.length
-    if (length > 5 && length < 30 ){
-      this.borderTarget.classlist.toggle("border border-success")
-    } else {
-      this.borderTarget.classlist.toggle("border border-danger")
-    }
+
+    console.log(this.borderTarget)
   }
 }

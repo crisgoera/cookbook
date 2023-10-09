@@ -1,0 +1,11 @@
+<div class="cookbook-form d-none" data-newCookbook-target="form">
+  <%= simple_form_for @new_cookbook, url: cookbook_index_path do |f| %>
+    <%= f.input :name,
+      error: "Name must have between 5 and 30 characters",
+      required: true,
+      input_html: { minLength: 5, maxLength: 30},
+      input_html: { data: { action: "keyup->newCookbook#validate", target: "newCookbook.border" } }%>
+
+    <%= f.submit "Create cookbook" %>
+  <% end %>
+</div>
